@@ -75,8 +75,11 @@ template <> struct Traits<Sampler_if> {
 	typedef Sampler_BruFabJoa::MyRNG_Parameters Parameters;
 };
 
+class FitterFabiola;
+
 template <> struct Traits<Fitter_if> {
-	typedef FitterMyImpl1 Implementation;
+	//typedef FitterMyImpl1 Implementation;
+        typedef FitterFabiola Implementation;
 };
 
 template <> struct Traits<Collector_if> {
@@ -120,6 +123,8 @@ template <> struct Traits<ExperimentDesign_if> {
 template <> struct Traits<ProcessAnalyser_if> {
 	typedef ProcessAnalyserMyImpl1 Implementation;
 };
+
+#include "FitterFabiola.h"
 
 #endif /* TRAITS_H */
 

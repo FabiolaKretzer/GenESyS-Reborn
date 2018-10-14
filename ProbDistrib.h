@@ -14,6 +14,8 @@
 #ifndef PROBDISTRIB_H
 #define PROBDISTRIB_H
 
+#include <cmath>
+
 class ProbDistrib {
 public:
 	static double uniform(double x, double min, double max);
