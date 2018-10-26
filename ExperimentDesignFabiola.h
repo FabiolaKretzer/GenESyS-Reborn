@@ -2,6 +2,10 @@
 #define EXPERIMENTDESIGNFABIOLA_H
 
 #include "ExperimentDesign_if.h"
+#include <math.h>
+#include <iostream>
+
+using namespace std;
 
 class ExperimentDesignFabiola : public ExperimentDesign_if {
 public:
@@ -17,6 +21,7 @@ public:
 private:
 	ProcessAnalyser_if* _processAnalyser; //= new Traits<ExperimentDesign_if>::ProcessAnalyserImplementation();
 	std::list<FactorOrInteractionContribution*>* _contributions = new std::list<FactorOrInteractionContribution*>();
+        std::list<SimulationScenario*>* _scenarios = new std::list<SimulationScenario*>();
 };
 
 #endif /* EXPERIMENTDESIGNFABIOLA_H */
