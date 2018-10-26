@@ -47,8 +47,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/Entity.o \
 	${OBJECTDIR}/EntityType.o \
 	${OBJECTDIR}/Event.o \
+	${OBJECTDIR}/ExperimentDesignFabiola.o \
 	${OBJECTDIR}/ExperimentDesignMyImpl1.o \
 	${OBJECTDIR}/FactorOrInteractionContribution.o \
+	${OBJECTDIR}/FitterJoaoSouto.o \
 	${OBJECTDIR}/FitterMyImpl1.o \
 	${OBJECTDIR}/HypothesisTesterMyImpl1.o \
 	${OBJECTDIR}/HypothesisTester_ar.o \
@@ -174,6 +176,11 @@ ${OBJECTDIR}/Event.o: Event.cpp nbproject/Makefile-${CND_CONF}.mk
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Event.o Event.cpp
 
+${OBJECTDIR}/ExperimentDesignFabiola.o: ExperimentDesignFabiola.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExperimentDesignFabiola.o ExperimentDesignFabiola.cpp
+
 ${OBJECTDIR}/ExperimentDesignMyImpl1.o: ExperimentDesignMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -183,6 +190,11 @@ ${OBJECTDIR}/FactorOrInteractionContribution.o: FactorOrInteractionContribution.
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FactorOrInteractionContribution.o FactorOrInteractionContribution.cpp
+
+${OBJECTDIR}/FitterJoaoSouto.o: FitterJoaoSouto.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FitterJoaoSouto.o FitterJoaoSouto.cpp
 
 ${OBJECTDIR}/FitterMyImpl1.o: FitterMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}

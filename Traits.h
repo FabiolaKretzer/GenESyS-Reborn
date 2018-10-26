@@ -117,9 +117,12 @@ template <> struct Traits<ModelPersistence_if> {
 	typedef ModelPersistenceMyImpl1 Implementation;
 };
 
+class ExperimentDesignFabiola; 
+
 template <> struct Traits<ExperimentDesign_if> {
-	typedef ExperimentDesignMyImpl1 Implementation;
+	//typedef ExperimentDesignMyImpl1 Implementation;
 	//typedef ProcessAnalyserMyImpl1 ProcessAnalyserImplementation;
+        typedef ExperimentDesignFabiola Implementation;
 };
 
 template <> struct Traits<ProcessAnalyser_if> {
@@ -131,6 +134,7 @@ template <> struct Traits<ProcessAnalyser_if> {
  * avoiding circular inclusions.
  */
 #include "FitterJoaoSouto.h"
+#include "ExperimentDesignFabiola.h"
 
 #endif /* TRAITS_H */
 

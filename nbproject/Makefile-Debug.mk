@@ -47,6 +47,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Entity.o \
 	${OBJECTDIR}/EntityType.o \
 	${OBJECTDIR}/Event.o \
+	${OBJECTDIR}/ExperimentDesignFabiola.o \
 	${OBJECTDIR}/ExperimentDesignMyImpl1.o \
 	${OBJECTDIR}/FactorOrInteractionContribution.o \
 	${OBJECTDIR}/FitterJoaoSouto.o \
@@ -174,6 +175,11 @@ ${OBJECTDIR}/Event.o: Event.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Event.o Event.cpp
+
+${OBJECTDIR}/ExperimentDesignFabiola.o: ExperimentDesignFabiola.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ExperimentDesignFabiola.o ExperimentDesignFabiola.cpp
 
 ${OBJECTDIR}/ExperimentDesignMyImpl1.o: ExperimentDesignMyImpl1.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}

@@ -4,10 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
+      <itemPath>ExperimentDesignFabiola.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
+      <itemPath>ExperimentDesignFabiola.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -89,7 +91,7 @@
       <itemPath>Model.h</itemPath>
       <itemPath>ModelCheckerMyImpl1.cpp</itemPath>
       <itemPath>ModelCheckerMyImpl1.h</itemPath>
-	  <itemPath>ModelChecker_DS2Karla.cpp</itemPath>
+      <itemPath>ModelChecker_DS2Karla.cpp</itemPath>
       <itemPath>ModelChecker_DS2Karla.h</itemPath>
       <itemPath>ModelChecker_if.h</itemPath>
       <itemPath>ModelComponent.cpp</itemPath>
@@ -251,6 +253,10 @@
       </item>
       <item path="Event.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ExperimentDesignFabiola.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExperimentDesignFabiola.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ExperimentDesignMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ExperimentDesignMyImpl1.h" ex="false" tool="3" flavor2="0">
@@ -318,7 +324,7 @@
       </item>
       <item path="ModelCheckerMyImpl1.h" ex="false" tool="3" flavor2="0">
       </item>
-	  <item path="ModelChecker_DS2Karla.cpp" ex="false" tool="1" flavor2="0">
+      <item path="ModelChecker_DS2Karla.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ModelChecker_DS2Karla.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -521,6 +527,10 @@
       </item>
       <item path="Event.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="ExperimentDesignFabiola.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ExperimentDesignFabiola.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="ExperimentDesignMyImpl1.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ExperimentDesignMyImpl1.h" ex="false" tool="3" flavor2="0">
@@ -588,7 +598,7 @@
       </item>
       <item path="ModelCheckerMyImpl1.h" ex="false" tool="3" flavor2="0">
       </item>
-	  <item path="ModelChecker_DS2Karla.cpp" ex="false" tool="1" flavor2="0">
+      <item path="ModelChecker_DS2Karla.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ModelChecker_DS2Karla.h" ex="false" tool="3" flavor2="0">
       </item>
