@@ -38,6 +38,12 @@ std::list<double>* SimulationScenario::getControlValues() const {
 	return _controlValues;
 }
 
+void SimulationScenario::setControlValue(SimulationControl* control, double value)// </editor-fold>
+{
+    control->getValue(value);
+    _controlValues->push_back(value);
+}
+
 void SimulationScenario::setModelFilename(std::string _modelFilename) {
 	this->_modelFilename = _modelFilename;
 }
