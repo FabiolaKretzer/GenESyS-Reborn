@@ -50,6 +50,7 @@
 #include "TestInputAnalyserTools.h"
 #include "ProcessAnalyserMyImpl1.h"
 #include "ExperimentDesignMyImpl1.h"
+#include "FitterFabiola.h"
 
 template <typename T>
 struct Traits {
@@ -77,8 +78,9 @@ template <> struct Traits<Sampler_if> {
 };
 
 template <> struct Traits<Fitter_if> {
-	typedef FitterMyImpl1 Implementation;
-    //typedef FitterJoaoSouto Implementation;
+	//typedef FitterMyImpl1 Implementation;
+        //typedef FitterJoaoSouto Implementation;
+        typedef FitterFabiola Implementation;
 };
 
 template <> struct Traits<Collector_if> {

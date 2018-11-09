@@ -4,10 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
+      <itemPath>FitterFabiola.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
+      <itemPath>FitterFabiola.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -181,7 +183,7 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>true</rebuildPropChanged>
       </toolsSet>
@@ -254,6 +256,10 @@
             flavor2="0">
       </item>
       <item path="FactorOrInteractionContribution.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FitterFabiola.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FitterFabiola.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="FitterJoaoSouto.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -510,6 +516,10 @@
             flavor2="0">
       </item>
       <item path="FactorOrInteractionContribution.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FitterFabiola.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FitterFabiola.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="FitterJoaoSouto.cpp" ex="false" tool="1" flavor2="0">
       </item>
