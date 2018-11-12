@@ -23,15 +23,15 @@
 #include "Fitter_if.h"
 
 #include "ProbDistrib.h"
-#include "CollectorDatafileCancianImpl.h"
-#include "StatisticsCancianImpl.h"
+#include "Statistics_if.h"
+#include "CollectorDatafile_if.h"
 
 class FitterFabiola: public Fitter_if {
     
 public:
 	FitterFabiola();
-	FitterFabiola(const FitterFabiola& orig);
-	~FitterFabiola();
+	FitterFabiola(const FitterFabiola& orig) = default;
+	~FitterFabiola() = default;
 	bool isNormalDistributed(double confidencelevel);
 	void fitUniform (double *sqrerror, double *min, double *max);
 	void fitTriangular (double *sqrerror, double *min, double *mo, double *max);
@@ -46,9 +46,8 @@ public:
 	std::string getDataFilename();
 	
 private:
-	std::string _dataFilename{""};
-	StatisticsCancianImpl* _statistics;
-        CollectorDatafileCancianImpl* _collector;
+	Statistics_if * _statistics;
+        CollectorDatafile_if * _collector;
 };
 
 #endif /* FITTERFABIOLA_H */

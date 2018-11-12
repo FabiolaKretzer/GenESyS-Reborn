@@ -15,7 +15,7 @@ void testStudentSoftwareDevelopments() {
 	CollectorDatafile_if* collector = new Traits<Collector_if>::Implementation();
 	collector->setDataFilename("./datafile.txt");
 	// just to show how to change MMC parameters
-	Traits<Sampler_if>::Parameters* parameters = (Traits<Sampler_if>::Parameters*) mmc->getRNGparameters();
+	/*Traits<Sampler_if>::Parameters* parameters = (Traits<Sampler_if>::Parameters*) mmc->getRNGparameters();
 	parameters->module = 2147483648;
 	parameters->multiplier = 1103515245;
 	parameters->seed = 1234;
@@ -42,7 +42,7 @@ void testStudentSoftwareDevelopments() {
 	for (unsigned int i = 0; i < numclasses; i++) {
 		statVal = statistics->histogramClassFrequency(i);
 	}
-
+        */
 	// fit datafile to different probability distributions
 	Fitter_if* fitter = simulator->getFitter();
 	fitter->setDataFilename(collector->getDataFilename());
@@ -54,7 +54,7 @@ void testStudentSoftwareDevelopments() {
 	fitter->fitTriangular(&sqrerror, &p1, &p2, &p3);
 	fitter->fitNormal(&sqrerror, &p1, &p2);
 	fitter->fitAll(&sqrerror, &distribName);
-
+        /*
 	// get some values from the PDF (Probability Density Functions)
 	value = ProbDistrib::uniform(0.25, 0.0, 1.0);
 	value = ProbDistrib::uniform(0.5, 0.0, 1.0); // should return the same value than above
@@ -78,7 +78,7 @@ void testStudentSoftwareDevelopments() {
 	res = tester->testAverage(0.95, 5100, HypothesisTester_if::DIFFERENT);
 	res = tester->testVariance(0.95, 350 * 350, HypothesisTester_if::EQUAL);
 	res = tester->testVariance(0.95, 350 * 350, HypothesisTester_if::LESS_THAN);
-
+        */
 }
 
 TestInputAnalyserTools::TestInputAnalyserTools() {
