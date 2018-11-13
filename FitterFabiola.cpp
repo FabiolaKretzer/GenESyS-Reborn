@@ -35,6 +35,7 @@ void FitterFabiola::fitUniform (double *sqrerror, double *min, double *max){
     double elements = _statistics->numElements();
     
     double integral = 0;
+    double frequency = 0;
     Traits<Integrator_if>::Implementation integrate;
     
     double a = *min;
@@ -42,7 +43,8 @@ void FitterFabiola::fitUniform (double *sqrerror, double *min, double *max){
     
     for (int i = 0; i < _statistics->histogramNumClasses(); i++) {
         integral = integrate.integrate(a, b, ProbDistrib::uniform, *min, *max);
-        *sqrerror = *sqrerror + pow(_statistics->histogramClassFrequency(i) - (integral * elements), 2);
+        frequency = integral * elements;
+        *sqrerror = *sqrerror + (pow(_statistics->histogramClassFrequency(i) - frequency, 2) / frequency);
         a = b;
         b = b + sizeClass;
     }
@@ -56,6 +58,7 @@ void FitterFabiola::fitTriangular (double *sqrerror, double *min, double *mo, do
     double elements = _statistics->numElements();
     
     double integral = 0;
+    double frequency = 0;
     Traits<Integrator_if>::Implementation integrate;
     
     double a = *min;
@@ -63,7 +66,8 @@ void FitterFabiola::fitTriangular (double *sqrerror, double *min, double *mo, do
     
     for (int i = 0; i < _statistics->histogramNumClasses(); i++) {
         integral = integrate.integrate(a, b, ProbDistrib::triangular, *min, *mo, *max);
-        *sqrerror = *sqrerror + pow(_statistics->histogramClassFrequency(i) - (integral * elements), 2);
+        frequency = integral * elements;
+        *sqrerror = *sqrerror + (pow(_statistics->histogramClassFrequency(i) - frequency, 2) / frequency);
         a = b;
         b = b + sizeClass;
     }
@@ -79,6 +83,7 @@ void FitterFabiola::fitNormal (double *sqrerror, double *avg, double *stddev) {
     double elements = _statistics->numElements();
     
     double integral = 0;
+    double frequency = 0;
     Traits<Integrator_if>::Implementation integrate;
     
     double a = min;
@@ -86,7 +91,8 @@ void FitterFabiola::fitNormal (double *sqrerror, double *avg, double *stddev) {
     
     for (int i = 0; i < _statistics->histogramNumClasses(); i++) {
         integral = integrate.integrate(a, b, ProbDistrib::normal, *avg, *stddev);
-        *sqrerror = *sqrerror + pow(_statistics->histogramClassFrequency(i) - (integral * elements), 2);
+        frequency = integral * elements;
+        *sqrerror = *sqrerror + (pow(_statistics->histogramClassFrequency(i) - frequency, 2) / frequency);
         a = b;
         b = b + sizeClass;
     }
@@ -101,6 +107,7 @@ void FitterFabiola::fitExpo (double *sqrerror, double *avg1) {
     double elements = _statistics->numElements();
     
     double integral = 0;
+    double frequency = 0;
     Traits<Integrator_if>::Implementation integrate;
     
     double a = min;
@@ -108,7 +115,8 @@ void FitterFabiola::fitExpo (double *sqrerror, double *avg1) {
     
     for (int i = 0; i < _statistics->histogramNumClasses(); i++) {
         integral = integrate.integrate(a, b, ProbDistrib::exponential, *avg1);
-        *sqrerror = *sqrerror + pow(_statistics->histogramClassFrequency(i) - (integral * elements), 2);
+        frequency = integral * elements;
+        *sqrerror = *sqrerror + (pow(_statistics->histogramClassFrequency(i) - frequency, 2) / frequency);
         a = b;
         b = b + sizeClass;
     }
@@ -124,6 +132,7 @@ void FitterFabiola::fitErlang (double *sqrerror, double *avg, double *m) {
     double elements = _statistics->numElements();
     
     double integral = 0;
+    double frequency = 0;
     Traits<Integrator_if>::Implementation integrate;
     
     double a = min;
@@ -131,7 +140,8 @@ void FitterFabiola::fitErlang (double *sqrerror, double *avg, double *m) {
     
     for (int i = 0; i < _statistics->histogramNumClasses(); i++) {
         integral = integrate.integrate(a, b, ProbDistrib::erlang, *avg, *m);
-        *sqrerror = *sqrerror + pow(_statistics->histogramClassFrequency(i) - (integral * elements) - integral, 2);
+        frequency = integral * elements;
+        *sqrerror = *sqrerror + (pow(_statistics->histogramClassFrequency(i) - frequency, 2) / frequency);
         a = b;
         b = b + sizeClass;
     }
@@ -151,6 +161,7 @@ void FitterFabiola::fitBeta (double *sqrerror, double *alpha, double *beta, doub
     double elements = _statistics->numElements();
     
     double integral = 0;
+    double frequency = 0;
     Traits<Integrator_if>::Implementation integrate;
     
     double a = *infLimit;
@@ -158,7 +169,8 @@ void FitterFabiola::fitBeta (double *sqrerror, double *alpha, double *beta, doub
     
     for (int i = 0; i < _statistics->histogramNumClasses(); i++) {
         integral = integrate.integrate(a, b, ProbDistrib::beta, *alpha, *beta);
-        *sqrerror = *sqrerror + pow(_statistics->histogramClassFrequency(i) - (integral * elements), 2);
+        frequency = integral * elements;
+        *sqrerror = *sqrerror + (pow(_statistics->histogramClassFrequency(i) - frequency, 2) / frequency);
         a = b;
         b = b + sizeClass;
     }
@@ -176,6 +188,7 @@ void FitterFabiola::fitWeibull (double *sqrerror, double *alpha, double *scale) 
     double elements = _statistics->numElements();
     
     double integral = 0;
+    double frequency = 0;
     Traits<Integrator_if>::Implementation integrate;
     
     double a = min;
@@ -183,7 +196,8 @@ void FitterFabiola::fitWeibull (double *sqrerror, double *alpha, double *scale) 
     
     for (int i = 0; i < _statistics->histogramNumClasses(); i++) {
         integral = integrate.integrate(a, b, ProbDistrib::weibull, *alpha, *scale);
-        *sqrerror = *sqrerror + pow(_statistics->histogramClassFrequency(i) - (integral * elements), 2);
+        frequency = integral * elements;
+        *sqrerror = *sqrerror + (pow(_statistics->histogramClassFrequency(i) - frequency, 2) / frequency);
         a = b;
         b = b + sizeClass;
     }

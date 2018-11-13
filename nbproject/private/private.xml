@@ -26,6 +26,14 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Classes"/>
-        <group/>
+        <group>
+            <file>file:/home/kretzer/gitreposity/GenESyS-Reborn/FitterFabiola.h</file>
+            <file>file:/home/kretzer/gitreposity/GenESyS-Reborn/FitterFabiola.cpp</file>
+            <file>file:/home/kretzer/gitreposity/GenESyS-Reborn/Traits.h</file>
+            <file>file:/home/kretzer/gitreposity/GenESyS-Reborn/TestInputAnalyserTools.cpp</file>
+            <file>file:/home/kretzer/gitreposity/GenESyS-Reborn/TestInputAnalyserTools.h</file>
+            <file>file:/home/kretzer/gitreposity/GenESyS-Reborn/main.cpp</file>
+            <file>file:/home/kretzer/gitreposity/GenESyS-Reborn/ProbDistrib.cpp</file>
+        </group>
     </open-files>
 </project-private>
